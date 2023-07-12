@@ -1,0 +1,64 @@
+.box {
+  width: 30%;
+  margin: 1rem 0 1rem 2.5rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 0.5rem;
+  color: #ffeeff;
+
+  img {
+    width: 100%;
+    height: 250px;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    object-fit: cover;
+  }
+  &-title {
+    font-size: 1rem;
+    text-align: center;
+    margin: 1rem 0;
+    font-weight: 500;
+  }
+  &-middle {
+    padding: 0 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0;
+
+    &__price,
+    &__student {
+      span {
+        font-weight: 600;
+        color: #ffeeff;
+      }
+    }
+    &__student {
+      color: #cdb187;
+    }
+  }
+  &-action {
+    margin: 0.5rem 0;
+    padding: 0 0.5rem;
+    display: flex;
+    align-items: center;
+
+    button {
+      width: 75%;
+      height: 40px;
+      background-color: #2eb573;
+      border: none;
+      border-radius: 0.5rem;
+      color: #ffeeff;
+      margin-left: 0.9rem;
+    }
+    &__left {
+      width: 20%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      span {
+        cursor: pointer;
+      }
+    }
+  }
+}

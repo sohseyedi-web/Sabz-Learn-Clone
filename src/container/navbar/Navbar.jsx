@@ -14,7 +14,7 @@ const Navbar = () => {
             </Link>
             <ul className="navbars-content__right-links">
               <li className="navbars-content__right-links__item">
-                <Link to={"/"}>همه دوره ها</Link>
+                <Link to={"/products"}>همه دوره ها</Link>
               </li>
               <li className="navbars-content__right-links__item">
                 <Link to={"/"}>مقالات</Link>

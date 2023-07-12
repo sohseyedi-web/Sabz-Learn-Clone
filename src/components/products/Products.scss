@@ -1,0 +1,12 @@
+.products {
+  display: flex;
+
+  
+  &-lists {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right: .5rem;
+  }
+}

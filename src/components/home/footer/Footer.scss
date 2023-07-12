@@ -16,7 +16,7 @@
       p {
         margin-top: 0.8rem;
         line-height: 2.2;
-        font-size: .9rem;
+        font-size: 0.9rem;
 
         span {
           color: #2eb573;
@@ -24,54 +24,53 @@
         }
       }
     }
-    &__items{
+    &__items {
       margin: 2rem 0;
       display: flex;
       justify-content: space-between;
 
-      &-line{
+      &-line {
         display: flex;
         flex-direction: column;
         line-height: 2.5;
 
-        a{
+        a {
           color: #ffeeff;
           font-size: 1.1rem;
           position: relative;
 
-          &:last-child{
-            &::after{
+          &:last-child {
+            &::after {
               width: 0;
             }
           }
 
-          &::after{
+          &::after {
             position: absolute;
-            content: '';
+            content: "";
             bottom: 0;
             width: 160px;
             background-color: #2eb573;
             height: 2px;
             right: 0;
-
           }
         }
-        p{
+        p {
           font-weight: 500;
         }
-        img{
+        img {
           background-color: #ffeeff;
-          border-radius: .5rem;
+          border-radius: 0.5rem;
         }
       }
     }
-    &__copy{
-        text-align: center;
-        span{
-            color: #2eb573;
-            font-size: 1.05rem;
-            font-weight: 600;
-        }
+    &__copy {
+      text-align: center;
+      span {
+        color: #2eb573;
+        font-size: 1.05rem;
+        font-weight: 600;
+      }
     }
   }
 }
