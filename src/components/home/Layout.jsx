@@ -5,11 +5,11 @@ import Container from './../../container/Container';
 
 const Layout = () => {
   return (
-    <Container>
+    <section>
         <Header/>
         <ProductList/>
         <Footer/>
-    </Container>
+    </section>
   )
 }
 
