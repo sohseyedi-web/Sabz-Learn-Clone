@@ -72,5 +72,17 @@
         font-weight: 600;
       }
     }
+
+    @media screen and (max-width : 992px){
+      &__items{
+        flex-wrap: wrap;
+
+        &-line{
+          width: 35%;
+          margin: 1rem auto;
+
+        }
+      }
+    }
   }
 }

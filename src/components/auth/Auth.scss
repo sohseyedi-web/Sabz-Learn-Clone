@@ -1,0 +1,66 @@
+.auth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  margin: 3rem auto;
+
+  &-form {
+    width: 100%;
+    background-color: rgba(39, 30, 30, 0.5);
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 0.8rem;
+    text-align: center;
+
+    img {
+      width: 80px;
+      margin-bottom: 1rem;
+    }
+    &__box {
+      margin: 0.8rem 0;
+      text-align: right;
+
+      label {
+        display: block;
+        margin-bottom: 0.7rem;
+        color: #2eb573;
+        font-weight: 500;
+      }
+      input {
+        width: 100%;
+        transition: all 0.4s ease-in-out;
+        height: 45px;
+        border: none;
+        outline: none;
+        border-radius: 0.5rem;
+        color: #252525;
+        text-align: center;
+        font-size: 1.1rem;
+
+        &::placeholder {
+          color: #252525;
+        }
+      }
+    }
+    &__btn{
+      margin: 1rem 0;
+      border-radius: 0.5rem;
+      background-color: #2eb573;
+      color: #fff;
+      height: 45px;
+      border: none;
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width : 992px){
+    width: 50%;
+  }
+  @media screen and (max-width : 768px){
+    width: 70%;
+  }
+  @media screen and (max-width : 600px){
+    width: 90%;
+  }
+}

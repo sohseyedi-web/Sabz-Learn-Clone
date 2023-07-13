@@ -4,6 +4,7 @@ import Cart from "./components/cart/Cart";
 import Single from "./components/singlepage/Single";
 import * as BiIcon from "react-icons/bi";
 import Products from "./components/products/Products";
+import Auth from './components/auth/Auth';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route element={<Cart />} path={"/cart"} />
         <Route element={<Single />} path={"/products/:id"} />
         <Route element={<Products />} path={"/products"} />
+        <Route element={<Auth />} path={"/auth"} />
       </Routes>
       <div className="contact">
         <BiIcon.BiMessageDetail size={30}/>

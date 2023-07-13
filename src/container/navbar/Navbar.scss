@@ -13,8 +13,14 @@
     &__left {
       align-items: center;
       display: flex;
-    }
-    &__right {
+
+      &-icon {
+        color: #ffeeff;
+        cursor: pointer;
+        display: none;
+        margin-left: 0.5rem;
+      }
+
       &-logo {
         margin-left: 0.8rem;
 
@@ -36,8 +42,6 @@
           }
         }
       }
-    }
-    &__left {
       &-btn {
         background-color: #2eb573;
         width: 150px;
@@ -49,6 +53,39 @@
       }
       &-cart {
         color: #ffeeff;
+      }
+    }
+
+    @media screen and (max-width: 992px) {
+      &__right {
+        &-icon {
+          display: block;
+        }
+        &-links {
+          position: absolute;
+          content: "";
+          top: 100%;
+          right: -100%;
+          background-color: #ffeeff;
+          flex-direction: column;
+          text-align: center;
+          padding: 1rem;
+          width: 100%;
+          transition: all 0.4s ease-in-out;
+
+          &.active-link {
+            right: 0%;
+            transition: all 0.4s ease-in-out;
+          }
+
+          &__item {
+            width: 100%;
+            line-height: 3;
+            a {
+              color: #2b2c3c;
+            }
+          }
+        }
       }
     }
   }

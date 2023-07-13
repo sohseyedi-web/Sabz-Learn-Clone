@@ -1,6 +1,6 @@
 .box {
   width: 30%;
-  margin: 1rem 0 1rem 2.5rem;
+  margin: 1rem auto;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   border-radius: 0.5rem;
   color: #ffeeff;
@@ -60,5 +60,12 @@
         cursor: pointer;
       }
     }
+  }
+
+  @media screen and (max-width: 992px) {
+    width: 45%;
+  }
+  @media screen and (max-width: 600px) {
+    width: 90%;
   }
 }
