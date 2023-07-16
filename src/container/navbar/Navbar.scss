@@ -3,6 +3,8 @@
   background: transparent;
   backdrop-filter: blur(8.5px);
   border-bottom: 1px solid #ffeeff;
+  z-index: 20;
+  position: relative;
   &-content {
     display: flex;
     align-items: center;
@@ -72,10 +74,12 @@
           padding: 1rem;
           width: 100%;
           transition: all 0.4s ease-in-out;
+          z-index: 100;
 
           &.active-link {
             right: 0%;
             transition: all 0.4s ease-in-out;
+            z-index: 100;
           }
 
           &__item {

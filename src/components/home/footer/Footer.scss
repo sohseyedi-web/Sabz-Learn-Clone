@@ -38,6 +38,12 @@
           color: #ffeeff;
           font-size: 1.1rem;
           position: relative;
+          transition: all .4s ease-in-out;
+
+          &:hover {
+            transition: all 0.4s ease-in-out;
+            color: #2eb573;
+          }
 
           &:last-child {
             &::after {
@@ -73,14 +79,13 @@
       }
     }
 
-    @media screen and (max-width : 992px){
-      &__items{
+    @media screen and (max-width: 992px) {
+      &__items {
         flex-wrap: wrap;
 
-        &-line{
+        &-line {
           width: 35%;
           margin: 1rem auto;
-
         }
       }
     }

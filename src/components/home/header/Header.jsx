@@ -9,16 +9,10 @@ const Header = () => {
         <Navbar />
         <div className="container h-100 d-flex align-items-center flex-column justify-content-center">
           <p className="header-container__title">
-            با آکادمی <h1>سبز لرن</h1> برنامه نویسی رو با خیال راحت یاد بگیر و
-            پیشرفت کن
+            با آکادمی <br />
+            <h1>سبز لرن</h1> برنامه نویسی رو با خیال راحت یاد بگیر و پیشرفت کن
           </p>
-          <form className="header-container__form">
-            <input type="text" placeholder="جستجو..." />
-            <RiICon.RiSearch2Line
-              size={33}
-              className="header-container__form-icon"
-            />
-          </form>
+
           <div className="header-container__data">
             <div className="header-container__data-box">
               <svg

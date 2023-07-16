@@ -28,10 +28,10 @@ const Footer = () => {
         </div>
         <div className="footer-container__items">
           <div className="footer-container__items-line">
-            <Link to="/" class="footer-content__items-link">
+            <Link to="/products" class="footer-content__items-link">
               فروشگاه
             </Link>
-            <Link to="/" class="footer-content__items-link">
+            <Link to="/auth" class="footer-content__items-link">
               حساب کاربری
             </Link>
             <Link to="/" class="footer-content__items-link">
@@ -48,10 +48,16 @@ const Footer = () => {
             <Link to="/" class="footer-content__items-link">
               قوانین و مقررات
             </Link>
-            <Link to="/" class="footer-content__items-link">
+            <Link
+              to="/products/e845e45b-5b56-41fd-b51f-ff9e4e44892b"
+              class="footer-content__items-link"
+            >
               آموزش جاوا اسکریپت
             </Link>
-            <Link to="/" class="footer-content__items-link">
+            <Link
+              to="/products/8453455a-7a47-477d-8d8b-baf799e7db76"
+              class="footer-content__items-link"
+            >
               آموزش گیت
             </Link>
           </div>
