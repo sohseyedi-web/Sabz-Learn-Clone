@@ -1,0 +1,101 @@
+.top {
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &-form {
+    width: 33%;
+    height: 45px;
+    position: relative;
+
+    input {
+      padding-right: 2.2rem;
+      width: 100%;
+      height: 100%;
+      outline: none;
+      border: none;
+      background-color: #2b2c3c;
+      border-radius: 0.5rem;
+      transition: all 0.4s ease-in-out;
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: #ffeeff;
+
+      &:focus {
+        transition: all 0.4s ease-in-out;
+        background-color: #ffeeff;
+        color: #2b2c3c;
+      }
+    }
+    span {
+      position: absolute;
+      right: 1%;
+      top: 18%;
+      color: #cdb187;
+    }
+  }
+  &-status {
+    display: flex;
+    align-items: center;
+
+    &__toggle {
+      width: 45px;
+      height: 25px;
+      cursor: pointer;
+      position: relative;
+      margin-left: 0.5rem;
+
+      input[type="checkbox"] {
+        display: none;
+
+        &:checked + .slider {
+          background-color: #44cc66;
+
+          .line {
+            left: calc(100% - 19px - 3px);
+          }
+        }
+      }
+
+      &-slider {
+        background-color: #ccc;
+        position: absolute;
+        border-radius: 100px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all 300ms ease;
+        transition: all 300ms ease;
+
+        &__line {
+          position: absolute;
+          -webkit-transition: all 300ms ease;
+          transition: all 300ms ease;
+          width: calc(25px - 6px);
+          height: calc(25px - 6px);
+          border-radius: 50%;
+          left: 3px;
+          top: 3px;
+          background-color: #fff;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    &-form {
+      width: 50%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    &-form {
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+  }
+}

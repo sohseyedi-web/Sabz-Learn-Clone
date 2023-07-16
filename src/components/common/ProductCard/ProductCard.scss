@@ -1,7 +1,7 @@
 .box {
-  width: 22%;
+  width: 23%;
   height: auto;
-  margin: 1rem auto;
+  margin: 1rem 0;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   border-radius: 0.5rem;
   color: #ffeeff;
@@ -85,5 +85,6 @@
   }
   @media screen and (max-width: 768px) {
     width: 90%;
+    margin: 1rem auto;
   }
 }
