@@ -1,22 +1,32 @@
 .box {
-  width: 30%;
+  width: 22%;
+  height: auto;
   margin: 1rem auto;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   border-radius: 0.5rem;
   color: #ffeeff;
+  padding: 1rem 0.6rem;
 
-  img {
-    width: 100%;
-    height: 250px;
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
-    object-fit: cover;
+  &-icon {
+    background-color: #2b2c3c;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+
+    img {
+      width: 45px;
+      height: 45px;
+    }
   }
   &-title {
-    font-size: 1rem;
-    text-align: center;
+    font-size: 1.1rem;
     margin: 1rem 0;
     font-weight: 500;
+    line-height: 2;
+    height: 70px;
   }
   &-middle {
     padding: 0 0.5rem;
@@ -25,39 +35,47 @@
     justify-content: space-between;
     margin: 2rem 0;
 
-    &__price,
-    &__student {
-      span {
-        font-weight: 600;
-        color: #ffeeff;
-      }
-    }
     &__student {
       color: #cdb187;
+      background-color: #2b2c3c;
+      font-size: 0.8rem;
+      border-radius: 0.5rem;
+      padding: 0.5rem 1.5rem;
+
+      span {
+        margin-right: 0.4rem;
+      }
     }
   }
   &-action {
-    margin: 0.5rem 0;
-    padding: 0 0.5rem;
+    margin: 0.5rem 0 0.1rem 0;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
     button {
-      width: 75%;
+      width: 35%;
       height: 40px;
       background-color: #2eb573;
       border: none;
-      border-radius: 0.5rem;
+      border-radius: 1.5rem;
       color: #ffeeff;
-      margin-left: 0.9rem;
+      transition: all 0.4s ease-in-out;
+
+      &:hover {
+        background-color: transparent;
+        transition: all 0.4s ease-in-out;
+      }
     }
-    &__left {
-      width: 20%;
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-      span {
-        cursor: pointer;
+    a {
+      font-size: 1.1rem;
+      color: #ffeeff;
+      font-weight: 500;
+      transition: all 0.4s ease-in-out;
+
+      &:hover {
+        transition: all 0.4s ease-in-out;
+        color: #2eb573;
       }
     }
   }
@@ -65,7 +83,7 @@
   @media screen and (max-width: 992px) {
     width: 45%;
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
     width: 90%;
   }
 }

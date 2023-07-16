@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./components/home/Layout";
 import Cart from "./components/cart/Cart";
 import Single from "./components/singlepage/Single";
-import * as BiIcon from "react-icons/bi";
+import * as HiIcon from "react-icons/hi2";
 import Products from "./components/products/Products";
 import Auth from './components/auth/Auth';
 
@@ -17,7 +17,7 @@ function App() {
         <Route element={<Auth />} path={"/auth"} />
       </Routes>
       <div className="contact">
-        <BiIcon.BiMessageDetail size={30}/>
+        <HiIcon.HiOutlineChatBubbleOvalLeft size={30}/>
       </div>
     </BrowserRouter>
   );
