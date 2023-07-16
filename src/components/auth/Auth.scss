@@ -7,11 +7,41 @@
 
   &-form {
     width: 100%;
-    background-color: rgba(39, 30, 30, 0.5);
     border-radius: 0.5rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     padding: 0.8rem;
     text-align: center;
+
+    &__navigation {
+      margin: 1rem auto 2rem auto;
+      width: 50%;
+      background-color: #2b2c3c;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #ffeeff;
+      border-radius: 1rem;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+      &-item {
+        width: 100%;
+        padding: 0.6rem 0;
+        transition: background-color 0.4s linear;
+        cursor: pointer;
+        &:first-child {
+          border-top-right-radius: 1rem;
+          border-bottom-right-radius: 1rem;
+        }
+        &:last-child {
+          border-top-left-radius: 1rem;
+          border-bottom-left-radius: 1rem;
+        }
+        &.active {
+          background-color: #2eb573;
+          transition: background-color 0.4s linear;
+        }
+      }
+    }
 
     img {
       width: 80px;
@@ -42,25 +72,35 @@
           color: #252525;
         }
       }
+      &-err {
+        color: #ff0000;
+        font-weight: 500;
+      }
     }
-    &__btn{
+    &__btn {
       margin: 1rem 0;
       border-radius: 0.5rem;
       background-color: #2eb573;
       color: #fff;
       height: 45px;
       border: none;
+      transition: opacity 0.4s linear;
       width: 100%;
+
+      &.btn-not {
+        opacity: 0.5;
+        transition: opacity 0.4s linear;
+      }
     }
   }
 
-  @media screen and (max-width : 992px){
+  @media screen and (max-width: 992px) {
     width: 50%;
   }
-  @media screen and (max-width : 768px){
+  @media screen and (max-width: 768px) {
     width: 70%;
   }
-  @media screen and (max-width : 600px){
+  @media screen and (max-width: 600px) {
     width: 90%;
   }
 }
