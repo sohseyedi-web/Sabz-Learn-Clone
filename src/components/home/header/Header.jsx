@@ -1,8 +1,9 @@
 import "./Header.scss";
-import * as RiICon from "react-icons/ri";
 import Navbar from "../../../container/navbar/Navbar";
 
 const Header = () => {
+
+
   return (
     <header className="header">
       <div className="header-container">
@@ -21,7 +22,7 @@ const Header = () => {
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="w-6 h-6"
+                className="w-6 h-6"
               >
                 <path
                   stroke-linecap="round"
@@ -39,7 +40,7 @@ const Header = () => {
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="w-6 h-6"
+                className="w-6 h-6"
               >
                 <path
                   stroke-linecap="round"
@@ -57,7 +58,7 @@ const Header = () => {
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="w-6 h-6"
+                className="w-6 h-6"
               >
                 <path
                   stroke-linecap="round"

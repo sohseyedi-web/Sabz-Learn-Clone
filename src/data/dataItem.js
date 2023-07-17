@@ -26,6 +26,7 @@ const dataItem = [
     price: "700000",
     student: 1012,
     icon: ReduxIcon,
+    quantity: 0,
   },
   {
     id: uuidv4(),
@@ -34,6 +35,7 @@ const dataItem = [
     price: "850000",
     student: 1015,
     icon: NextjsIcon,
+    quantity: 0,
   },
   {
     id: uuidv4(),
@@ -42,6 +44,7 @@ const dataItem = [
     price: "700000",
     student: 1037,
     icon: ReactjsIcon,
+    quantity: 0,
   },
   {
     id: uuidv4(),
@@ -50,6 +53,7 @@ const dataItem = [
     price: "340000",
     student: 344,
     icon: GithubIcon,
+    quantity: 0,
   },
   {
     id: uuidv4(),
@@ -58,6 +62,7 @@ const dataItem = [
     price: "900000",
     student: 213,
     icon: TyescriptIcon,
+    quantity: 0,
   },
   {
     id: uuidv4(),
@@ -66,6 +71,7 @@ const dataItem = [
     price: "350000",
     student: 168,
     icon: TailwindIcon,
+    quantity: 0,
   },
   {
     id: uuidv4(),
@@ -74,6 +80,7 @@ const dataItem = [
     price: "675000",
     student: 689,
     icon: JavaScriptIcon,
+    quantity: 0,
   },
   {
     id: uuidv4(),
@@ -82,6 +89,7 @@ const dataItem = [
     price: "رایگان",
     student: 5802,
     icon: HtmlIcon,
+    quantity: 0,
   },
 ];
 

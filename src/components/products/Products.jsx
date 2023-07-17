@@ -1,16 +1,18 @@
 import Container from "../../container/Container";
-import dataItem from "../../data/dataItem";
+import { useProduct } from "../../context/ProductProvider";
 import ProductCard from "../common/ProductCard/ProductCard";
 import TopHeader from "./header/TopHeader";
 import "./Products.scss";
 
 const Products = () => {
+  const { data } = useProduct();
+
   return (
     <Container>
       <section className="products ">
         <TopHeader />
         <div className="products-container container">
-          {dataItem.map((item) => (
+          {data.map((item) => (
             <ProductCard key={item.id} item={item} />
           ))}
         </div>

@@ -1,9 +1,28 @@
 import "./ProductCard.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import * as RiIcon from "react-icons/ri";
 import { toPersianNumbersWithComma } from "./../../../utils/toPersianNumber";
+import {
+  useProduct,
+  useProductDispatch,
+} from "./../../../context/ProductProvider";
+import { toast } from "react-hot-toast";
+import { checkInCart } from "../../../utils/checkInCart";
 
 const ProductCard = ({ item }) => {
+  const dispatch = useProductDispatch();
+  const { products } = useProduct();
+  const navigate = useNavigate();
+
+  const addItem = () => {
+    if (checkInCart(products, item)) {
+      navigate("/cart");
+    } else {
+      dispatch({ type: "ADD_ITEM", payload: item });
+      toast.success("دوره به سبد خرید افزوده شد");
+    }
+  };
+
   return (
     <div className="box" key={item.id}>
       <div className="box-icon">
@@ -20,7 +39,16 @@ const ProductCard = ({ item }) => {
         </div>
       </div>
       <div className="box-action">
-        <button className="box-action__btn">ثبت نام </button>
+        <button
+          onClick={addItem}
+          className={
+            !checkInCart(products, item)
+              ? "box-action__btn"
+              : "box-action__btn btn-cart"
+          }
+        >
+          {!checkInCart(products, item) ? "ثبت نام" : "ادامه سفارش"}
+        </button>
         <Link to={`/products/${item.id}`}>
           مشاهده دوره
           <span>

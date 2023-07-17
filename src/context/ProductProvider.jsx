@@ -1,24 +1,19 @@
 import { createContext, useContext, useReducer } from "react";
 import dataItem from "./../data/dataItem";
+import { productReducer } from "./ProductReducer";
 
 export const ProductContext = createContext();
 export const ProductContextActions = createContext();
 
 const initialState = {
-  products: localStorage.getItem("poroducts")
-    ? JSON.parse(localStorage.getItem("poroducts"))
+  products: localStorage.getItem("products")
+    ? JSON.parse(localStorage.getItem("products"))
     : [],
-};
-
-const productHandler = (state = initialState, action) => {
-  switch (action.type) {
-    default:
-      return state;
-  }
+  data: dataItem,
 };
 
 const ProductProvider = ({ children }) => {
-  const [product, dispatch] = useReducer(productHandler, dataItem);
+  const [product, dispatch] = useReducer(productReducer, initialState);
 
   return (
     <ProductContext.Provider value={product}>

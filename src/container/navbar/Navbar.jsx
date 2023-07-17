@@ -3,9 +3,12 @@ import Logo from "../../assets/logo-one.png";
 import * as HiIcon from "react-icons/hi";
 import "./Navbar.scss";
 import { useState } from "react";
+import { useProduct } from "../../context/ProductProvider";
+import { toPersianNumbers } from "./../../utils/toPersianNumber";
 
 const Navbar = () => {
   const [active, setActive] = useState(false);
+  const { products } = useProduct();
 
   return (
     <nav className="navbars">
@@ -47,6 +50,9 @@ const Navbar = () => {
           </Link>
           <Link to={"/"} className="navbars-content__left-cart">
             <HiIcon.HiOutlineShoppingBag size={26} />
+            <span className="navbars-content__left-cart__number">
+              {toPersianNumbers(products.length)}
+            </span>
           </Link>
         </div>
       </div>
