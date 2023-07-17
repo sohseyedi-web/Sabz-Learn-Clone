@@ -7,12 +7,12 @@ import {
   useProductDispatch,
 } from "./../../../context/ProductProvider";
 import { toast } from "react-hot-toast";
-import { checkInCart } from "../../../utils/checkInCart";
+import { checkInCart } from "./../../../utils/checkInCart";
 
 const ProductCard = ({ item }) => {
   const dispatch = useProductDispatch();
-  const { products } = useProduct();
   const navigate = useNavigate();
+  const { products } = useProduct();
 
   const addItem = () => {
     if (checkInCart(products, item)) {
@@ -42,12 +42,12 @@ const ProductCard = ({ item }) => {
         <button
           onClick={addItem}
           className={
-            !checkInCart(products, item)
-              ? "box-action__btn"
-              : "box-action__btn btn-cart"
+            checkInCart(products, item)
+              ? "box-action__btn btn-cart"
+              : "box-action__btn "
           }
         >
-          {!checkInCart(products, item) ? "ثبت نام" : "ادامه سفارش"}
+          {checkInCart(products, item) ? "ادامه سفارش" : "ثبت نام"}
         </button>
         <Link to={`/products/${item.id}`}>
           مشاهده دوره

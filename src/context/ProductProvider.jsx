@@ -6,9 +6,7 @@ export const ProductContext = createContext();
 export const ProductContextActions = createContext();
 
 const initialState = {
-  products: localStorage.getItem("products")
-    ? JSON.parse(localStorage.getItem("products"))
-    : [],
+  products: [],
   data: dataItem,
 };
 

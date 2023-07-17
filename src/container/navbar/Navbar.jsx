@@ -48,7 +48,7 @@ const Navbar = () => {
           <Link to={"/auth"} className="navbars-content__left-btn">
             ورود / عضویت
           </Link>
-          <Link to={"/"} className="navbars-content__left-cart">
+          <Link to={"/cart"} className="navbars-content__left-cart">
             <HiIcon.HiOutlineShoppingBag size={26} />
             <span className="navbars-content__left-cart__number">
               {toPersianNumbers(products.length)}
