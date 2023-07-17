@@ -1,23 +1,32 @@
 import "./Cart.scss";
 import Container from "./../../container/Container";
 import Empty from "./../common/empty/Empty";
-import { toPersianNumbersWithComma } from "./../../utils/toPersianNumber";
+import {
+  toPersianNumbers,
+  toPersianNumbersWithComma,
+} from "./../../utils/toPersianNumber";
 import { useProductDispatch, useProduct } from "../../context/ProductProvider";
 import { toast } from "react-hot-toast";
 import * as RiIcon from "react-icons/ri";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const { products } = useProduct();
   const dispatch = useProductDispatch();
   const hasItems = products.length;
+  const navigate = useNavigate();
 
-  const addItem = () => {
+  const addItem = (item) => {
     dispatch({ type: "ADD_ITEM", payload: item });
     toast.success("دوره به سبد خرید افزوده شد");
   };
-  const removeItem = () => {
+  const removeItem = (item) => {
     dispatch({ type: "REMOVE_ITEM", payload: item });
-    toast.success("دوره از سبد خرید کم شد");
+    toast.error("دوره از سبد خرید کم شد");
+  };
+
+  const handleCheckOut = () => {
+    navigate("/check");
   };
 
   const totalPrice = products.reduce(
@@ -56,7 +65,7 @@ const Cart = () => {
                           <RiIcon.RiAddLine />
                         </button>
                         <span className="cart-container__details-box__left-quantity">
-                          {cart.quantity}
+                          {toPersianNumbers(cart.quantity)}
                         </span>
                         <button onClick={() => removeItem(cart)}>
                           <RiIcon.RiSubtractFill />
@@ -82,7 +91,10 @@ const Cart = () => {
                     <span>جمع نهایی</span>
                     <span>{toPersianNumbersWithComma(totalPrice)}</span>
                   </div>
-                  <button className="cart-container__factor-btn">
+                  <button
+                    className="cart-container__factor-btn"
+                    onClick={handleCheckOut}
+                  >
                     ثبت سفارش
                   </button>
                 </div>
