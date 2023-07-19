@@ -20,7 +20,8 @@ import { v4 as uuidv4 } from "uuid";
 
 const dataItem = [
   {
-    id: uuidv4(),
+    id: 0,
+    courseId: uuidv4(),
     cover: Redux,
     title: "آموزش تخصصی Redux مقدماتی تا پیشرفته",
     price: "700000",
@@ -29,8 +30,9 @@ const dataItem = [
     quantity: 0,
   },
   {
-    id: uuidv4(),
-    cover: NextjsIcon,
+    id: 1,
+    courseId: uuidv4(),
+    cover: Nextjs,
     title: "آموزش Next.js بصورت پروژه محور",
     price: "850000",
     student: 1015,
@@ -38,7 +40,8 @@ const dataItem = [
     quantity: 0,
   },
   {
-    id: uuidv4(),
+    id: 2,
+    courseId: uuidv4(),
     cover: Reactjs,
     title: "آموزش ۲۰ کتابخانه کاربردی ReactJS برای بازارکار",
     price: "700000",
@@ -47,7 +50,8 @@ const dataItem = [
     quantity: 0,
   },
   {
-    id: uuidv4(),
+    id: 3,
+    courseId: uuidv4(),
     cover: Github,
     title: "آموزش git و github",
     price: "340000",
@@ -56,7 +60,8 @@ const dataItem = [
     quantity: 0,
   },
   {
-    id: uuidv4(),
+    id: 4,
+    courseId: uuidv4(),
     cover: Tyescript,
     title: "آموزش کاربردی Typescript بصورت پروژه محور",
     price: "900000",
@@ -65,7 +70,8 @@ const dataItem = [
     quantity: 0,
   },
   {
-    id: uuidv4(),
+    id: 5,
+    courseId: uuidv4(),
     cover: Tailwind,
     title: "آموزش جامع و پروژه محور Tailwind css",
     price: "350000",
@@ -74,7 +80,8 @@ const dataItem = [
     quantity: 0,
   },
   {
-    id: uuidv4(),
+    id: 6,
+    courseId: uuidv4(),
     cover: JavaScript,
     title: "پروژه های تخصصی با جاوا اسکریپت برای بازار کار",
     price: "675000",
@@ -83,7 +90,8 @@ const dataItem = [
     quantity: 0,
   },
   {
-    id: uuidv4(),
+    id: 7,
+    courseId: uuidv4(),
     cover: Html,
     title: "200 پروژه با Html",
     price: "رایگان",

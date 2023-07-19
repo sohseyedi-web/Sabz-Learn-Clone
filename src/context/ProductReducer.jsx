@@ -55,6 +55,7 @@ export const productReducer = (state, action) => {
         return { ...state, data: filterItems };
       }
     }
+    
     default:
       return state;
   }

@@ -1,10 +1,7 @@
 import "./Cart.scss";
 import Container from "./../../container/Container";
 import Empty from "./../common/empty/Empty";
-import {
-  toPersianNumbers,
-  toPersianNumbersWithComma,
-} from "./../../utils/toPersianNumber";
+import { toPersianNumbersWithComma } from "./../../utils/toPersianNumber";
 import { useProductDispatch, useProduct } from "../../context/ProductProvider";
 import { toast } from "react-hot-toast";
 import * as RiIcon from "react-icons/ri";
@@ -65,7 +62,7 @@ const Cart = () => {
                           <RiIcon.RiAddLine />
                         </button>
                         <span className="cart-container__details-box__left-quantity">
-                          {toPersianNumbers(cart.quantity)}
+                          {toPersianNumbersWithComma(cart.quantity)}
                         </span>
                         <button onClick={() => removeItem(cart)}>
                           <RiIcon.RiSubtractFill />
