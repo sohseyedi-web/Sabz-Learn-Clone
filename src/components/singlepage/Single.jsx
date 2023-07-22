@@ -8,6 +8,7 @@ import {
   useProductDispatch,
 } from "./../../context/ProductProvider";
 import { toast } from "react-hot-toast";
+import Comments from "./comments/Comments";
 
 const Single = () => {
   const { id } = useParams();
@@ -61,6 +62,7 @@ const Single = () => {
           </div>
         </div>
       </section>
+      <Comments/>
     </Container>
   );
 };
